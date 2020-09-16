@@ -25,6 +25,10 @@
 }
 
 /*general styles*/
+:root {
+	--main-yellow: #ffbd54;
+	--main-black: #333333;
+}
 .body {
 	margin: 0;
 	padding: 0;
@@ -39,7 +43,114 @@
 .container {
 	max-width: 1350px;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 /*body*/
+.site-header__address-work {
+	background-color: #f9f8f8;
+}
+.address-work__container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-top: 11px;
+	padding-bottom: 11px;
+}
+.address-work__address {
+	display: flex;
+	align-items: center;
+	margin-right: 105px;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 500;
+}
+	.address-work__address::before {
+		content: "";
+		width: 13px;
+		height: 13px;
+		margin-right: 9px;
+		background-image: url("../img/home-icon.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+.address-work__tel-list {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	margin-right: 100px;
+	list-style-type: none;
+}
+	.address-work__tel-list::before {
+		content: "";
+		width: 13px;
+		height: 13px;
+		margin-right: 9px;
+		background-image: url("../img/tel-icon.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+.address-work__tel-item {
+	display: flex;
+	align-items: center;
+}
+	.address-work__tel-item:not(:last-child) {
+		margin-right: 9px;
+	}
+	.address-work__tel-item:nth-of-type(2)::before,
+	.address-work__tel-item:nth-of-type(3)::before {
+		content: "";
+		width: 4px;
+		height: 4px;
+		margin-right: 9px;
+		border-radius: 50%;
+		background-color: var(--main-yellow);
+	}
+.address-work__tel-link {
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 500;
+	color: var(--main-black);
+	text-decoration: none;
+}
+	.address-work__tel-link:hover {
+		color: var(--main-yellow);
+	}
+	.address-work__tel-link:active {
+		color: var(--main-black);
+		opacity: 0.5;
+	}
+.week-time-wrapper {
+	display: flex;
+	align-items: center;
+}
+	.week-time-wrapper::before {
+		content: "";
+		flex-shrink: 0;
+		width: 15px;
+		height: 15px;
+		margin-right: 7px;
+		background-image: url("../img/schedule.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+.week-time {
+	margin: 0;
+	font-size: 14px;
+	line-height: 18px;
+}
+	.week-time:first-of-type {
+		margin-right: 17px;
+	}
+.week {
+	font-weight: 500;
+}
