@@ -28,8 +28,13 @@
 :root {
 	--main-yellow: #ffbd54;
 	--main-black: #333333;
+	--main-white: #ffffff;
+	height: 100%;
 }
 .body {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	font-family: "Futura PT", "Arial", sans-serif;
@@ -48,6 +53,7 @@
 }
 
 /*body*/
+/*site-header*/
 .site-header__address-work {
 	background-color: #f9f8f8;
 }
@@ -81,6 +87,7 @@
 .address-work__tel-list {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	padding: 0;
 	margin: 0;
 	margin-right: 100px;
@@ -117,6 +124,7 @@
 	font-size: 14px;
 	line-height: 18px;
 	font-weight: 500;
+	white-space: nowrap;
 	color: var(--main-black);
 	text-decoration: none;
 }
@@ -130,6 +138,7 @@
 .week-time-wrapper {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 }
 	.week-time-wrapper::before {
 		content: "";
@@ -147,10 +156,115 @@
 	margin: 0;
 	font-size: 14px;
 	line-height: 18px;
+	white-space: nowrap;
 }
 	.week-time:first-of-type {
 		margin-right: 17px;
 	}
 .week {
 	font-weight: 500;
+}
+
+/*site-nav*/
+.site-nav {
+	border: 1px solid #f3f3f3;
+	background-color: var(--main-white);
+}
+.site-nav__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo {
+	position: relative;
+	flex-shrink: 0;
+	width: 184px;
+}
+.logo__link {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+	.logo__link:hover {
+		opacity: 0.8;
+	}
+	.logo__link:active {
+		opacity: 0.5;
+	}
+.logo__img {
+	display: block;
+}
+.header__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	margin-left: 15px;
+	margin-right: 15px;
+	padding: 0;
+	list-style-type: none;
+}
+	.header__item--active .header__link::before {
+		content: "";
+		width: 22px;
+		height: 22px;
+		margin-right: 12px;
+		background-image: url("../img/active-icon.png");
+		background-repeat: no-repeat;
+		-webkit-background-size: contain;
+		background-size: contain;
+		background-position: center;
+	}
+.header__link {
+	display: flex;
+	align-items: center;
+	padding: 19px 27px;
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: 500;
+	color: var(--main-black);
+	text-decoration: none;
+}
+	.header__link:hover {
+		color: var(--main-black);
+		background-color: var(--main-yellow);
+	}
+	.header__link:active {
+		opacity: 0.5;
+	}
+.header__question {
+	display: flex;
+	align-items: center;
+	padding: 19px 27px;
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: 500;
+	white-space: nowrap;
+	color: var(--main-black);
+	text-decoration: none;
+}
+	.header__question::before {
+		content: "";
+		width: 24px;
+		height: 22px;
+		margin-right: 5px;
+		background-image: url("../img/pet-foot-icon.png");
+		background-repeat: no-repeat;
+		-webkit-background-size: contain;
+		background-size: contain;
+		background-position: center;
+	}
+	.header__question:hover {
+		color: var(--main-white);
+		background-color: var(--main-black);
+	}
+	.header__question:active {
+		opacity: 0.5;
+	}
+
+/*site-main*/
+.site-main {
+	flex-grow: 1;
+	background-color: #f9f9f9;
 }
