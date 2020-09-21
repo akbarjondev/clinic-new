@@ -16,13 +16,13 @@
 				<address class="address-work__address header-address">г. Мариуполь, проспект Победы, 48а</address>
 				
 				<ul class="address-work__tel-list">
-					<li class="address-work__tel-item">
+					<li class="address-work__tel-item address-work__tel-item-dot">
 						<a class="address-work__tel-link" href="tel:+0676347574">(067) 634-75-74</a>
 					</li>
-					<li class="address-work__tel-item">
+					<li class="address-work__tel-item address-work__tel-item-dot">
 						<a class="address-work__tel-link" href="tel:+0637570131">(0637) 57-01-31</a>
 					</li>
-					<li class="address-work__tel-item">
+					<li class="address-work__tel-item address-work__tel-item-dot">
 						<a class="address-work__tel-link" href="tel:+0982664389">(098) 266-43-89</a>
 					</li>
 				</ul><!-- End of address-work__tel-list -->
@@ -41,27 +41,32 @@
 						<img class="logo__img" src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" alt="Veterinary logo" width="178" height="87">
 					</a>
 				</div><!-- End of logo-wrapper -->
-
-				<ul class="header__list">
-					<li class="header__item header__item--active">
-						<a class="header__link" href="#">Главная</a>
-					</li>
-					<li class="header__item">
-						<a class="header__link" href="#">О Клинике</a>
-					</li>
-					<li class="header__item">
-						<a class="header__link" href="#">Наши Услуги</a>
-					</li>
-					<li class="header__item">
-						<a class="header__link" href="#">Полезные Статьи</a>
-					</li>
-					<li class="header__item">
-						<a class="header__link" href="#">FAQ</a>
-					</li>
-					<li class="header__item">
-						<a class="header__link" href="#">Контакты</a>
-					</li>
-				</ul><!-- End of header__list -->
+				
+				<div class="navigation-list">
+					<button class="navigation-list__button burger">
+						<span class="burger__img"></span>
+					</button>
+					<ul class="header__list">
+						<li class="header__item header__item--active">
+							<a class="header__link" href="#">Главная</a>
+						</li>
+						<li class="header__item">
+							<a class="header__link" href="#">О Клинике</a>
+						</li>
+						<li class="header__item">
+							<a class="header__link" href="#">Наши Услуги</a>
+						</li>
+						<li class="header__item">
+							<a class="header__link" href="#">Полезные Статьи</a>
+						</li>
+						<li class="header__item">
+							<a class="header__link" href="#">FAQ</a>
+						</li>
+						<li class="header__item">
+							<a class="header__link" href="#">Контакты</a>
+						</li>
+					</ul><!-- End of header__list -->
+				</div>
 
 				<a class="header__question" href="#">Задать вопрос</a>
 			</div><!-- End of container -->
@@ -69,6 +74,16 @@
 	</header><!-- End of site-header -->
 
 	<main class="site-main">
+		<section class="hero">
+			<div class="container hero__container">
+				<div class="hero__inner">
+					<h1 class="hero__heading">Мы заботимся о <span class="blue-text">ваших питомцах!</span></h1>
+					<p class="hero__text">Вам и Вашему любимцу множество услуг по диагностике, профилактике заболеваний по лечению и уходу за Вашими животными. Профессионалы работающие в нашей клинике сделают все для того, чтобы быстро, эффективно и максимально безболезненно выполнить любие процедуры, которые необходимы Вашему домашнему любимцу.</p>
+					<a class="hero__link button button--dark" href="#services">Наши услуги</a>
+				</div>
+			</div>
+		</section><!-- End of hero -->
+
 		<div class="container">
 			<section class="news">
 				<h2 class="news__heading">Полезные статьи</h2>
